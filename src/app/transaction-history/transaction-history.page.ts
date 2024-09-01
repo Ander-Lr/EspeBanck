@@ -6,24 +6,38 @@ import { Component } from '@angular/core';
   styleUrls: ['./transaction-history.page.scss'],
 })
 export class TransactionHistoryPage {
-  // Define la propiedad transactions como un array de objetos
   transactions = [
     {
-      estado: 'Enviada',
-      fecha: '15/10/2015',
-      cuentaOrigen: 'CRIKATS',
-      cuentaDestino: 'PLANILLA',
-      monto: '22,000.00 CRC'
+      descripcion: 'Transferencia Recibida Moises Caicedo',
+      estado: 'Completada',
+      fecha: '23/08/2024',
+      cuentaOrigen: 'Cuenta #1',
+      cuentaDestino: 'Cuenta #2',
+      monto: 2000
     },
     {
-      estado: 'Recibida',
-      fecha: '16/10/2015',
-      cuentaOrigen: 'CRIKATS',
-      cuentaDestino: 'AHORROS',
-      monto: '10,000.00 CRC'
+      descripcion: 'Pago agua potable',
+      estado: 'Pendiente',
+      fecha: '23/08/2024',
+      cuentaOrigen: 'Cuenta #1',
+      cuentaDestino: 'Proveedor Agua',
+      monto: -20
     },
-    // Puedes agregar más transacciones de ejemplo aquí
+    {
+      descripcion: 'Cobro Plan Claro',
+      estado: 'Completada',
+      fecha: '23/08/2024',
+      cuentaOrigen: 'Cuenta #1',
+      cuentaDestino: 'Claro',
+      monto: -10.99
+    },
+    {
+      descripcion: 'Impuestos',
+      estado: 'Completada',
+      fecha: '23/08/2024',
+      cuentaOrigen: 'Cuenta #1',
+      cuentaDestino: 'Gobierno',
+      monto: -1.99
+    },
   ];
-
-  constructor() {}
 }

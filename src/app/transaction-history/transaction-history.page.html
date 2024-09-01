@@ -1,43 +1,36 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/main-page"></ion-back-button>
+    </ion-buttons>
     <ion-title>Historial de Transacciones</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="transaction-form">
-    <ion-item>
-      <ion-label position="stacked">Fecha Desde:</ion-label>
-      <ion-datetime display-format="DD/MM/YYYY" picker-format="DD/MM/YYYY"></ion-datetime>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="stacked">Fecha Hasta:</ion-label>
-      <ion-datetime display-format="DD/MM/YYYY" picker-format="DD/MM/YYYY"></ion-datetime>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="stacked">Tipo:</ion-label>
-      <ion-select>
-        <ion-select-option value="transfer">Transferencias</ion-select-option>
-        <ion-select-option value="payment">Pagos</ion-select-option>
-        <!-- Más opciones aquí -->
-      </ion-select>
-    </ion-item>
-
-    <ion-button expand="block" color="primary">Aceptar</ion-button>
-    <ion-button expand="block" color="light">Limpiar</ion-button>
-  </div>
-
   <ion-list class="transaction-list">
-    <ion-item *ngFor="let transaction of transactions">
+    <ion-item *ngFor="let transaction of transactions" class="transaction-item">
       <ion-label>
-        <h2>{{ transaction.estado }}</h2>
-        <p>Fecha: {{ transaction.fecha }}</p>
-        <p>Cuenta Origen: {{ transaction.cuentaOrigen }}</p>
-        <p>Cuenta Destino: {{ transaction.cuentaDestino }}</p>
-        <p>Monto: {{ transaction.monto }}</p>
+        <p class="transaction-date">Fecha: {{ transaction.fecha }}</p>
+        <h2 class="transaction-description">{{ transaction.descripcion }}</h2>
+        <p class="transaction-amount" [ngStyle]="{'color': transaction.monto > 0 ? 'green' : 'red'}">
+          {{ transaction.monto | currency }}
+        </p>
       </ion-label>
     </ion-item>
   </ion-list>
+
+  <div class="transaction-form">
+    <ion-item>
+      <ion-label position="stacked">Fecha de inicio</ion-label>
+      <ion-datetime display-format="MM/DD/YYYY" picker-format="MM/DD/YYYY"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Fecha de fin</ion-label>
+      <ion-datetime display-format="MM/DD/YYYY" picker-format="MM/DD/YYYY"></ion-datetime>
+    </ion-item>
+
+    <ion-button expand="block" color="primary">Búsqueda por fecha</ion-button>
+  </div>
 </ion-content>
