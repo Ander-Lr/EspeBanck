@@ -1,0 +1,104 @@
+ion-header {
+  --background: #BB9360;
+  --color: #fff;
+}
+
+ion-toolbar {
+  --background: #BB9360;
+}
+
+ion-content {
+  --background: #fff; /* Cambiar el color de fondo aquí */
+}
+
+.rectangle-48 {
+  width: 100%;
+  height: 42px;
+  padding: 8px;
+  background: #F4FAFC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ingrese-cantidad-5 {
+  color: #989EB1;
+  font-family: "Asap";
+  font-weight: 400;
+  font-size: 15px;
+  text-align: left;
+}
+
+.account-container {
+  width: 100%;
+  height: 59px;
+  padding: 8px;
+  background: #F4FAFC;
+  color: #000000;
+  border: 3px solid #0F2A3F;
+  border-radius: 25px;
+  font-family: "Helvetica";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cuenta-label,
+.cuenta-amount {
+  font-family: "Quicksand";
+  font-weight: 400;
+  font-size: 18px;
+  color: #000000;
+}
+
+.input-item {
+  margin-bottom: 16px;
+}
+
+.input-background {
+  --background: #DEE2E6;
+}
+
+.validate-button {
+  margin-top: 8px;
+  box-shadow: 0px 5px 10px rgba(248, 95, 106, 0.23);
+  background: #0F2A3F;
+  color: #FFFFFF;
+  border-radius: 6px;
+  font-family: "Asap";
+  font-weight: 600;
+  font-size: 17px;
+  text-align: center;
+}
+
+.checkbox-5 {
+  margin-left: 16px;
+  --background: #0F2A3F;
+  --color: #5E0202;
+  border: 2px solid #0F2A3F;
+}
+
+.terms-label {
+  margin-left: 8px;
+  color: #35424A;
+  font-family: "Asap";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.button-style {
+  box-shadow: 0px 5px 10px rgba(248, 95, 106, 0.23);
+  background: #0F2A3F;
+  color: #FFFFFF;
+  border-radius: 6px;
+  font-family: "Asap";
+  font-weight: 600;
+  font-size: 17px;
+  text-align: center;
+}

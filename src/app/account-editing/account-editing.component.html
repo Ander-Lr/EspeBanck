@@ -1,0 +1,101 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Información Personal</ion-title>
+    <ion-avatar slot="end">
+      <img src="assets/images/profile-pic.jpg" alt="User Photo">
+    </ion-avatar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="profile-container">
+    <ion-avatar>
+      <img src="assets/Logo-EspeBank.png" alt="User Photo">
+    </ion-avatar>
+  </div>
+
+  <ion-list lines="none" class="input-list">
+    <!-- Fila para Nombres y Apellidos -->
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="stacked">Nombres:</ion-label>
+            <ion-input value="Anderson Lenin"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-label position="stacked">Apellidos:</ion-label>
+            <ion-input value="Lara Chicaiza"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <!-- Fila para Cédula y Celular -->
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="stacked">Cédula:</ion-label>
+            <ion-input value="1234567890"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-label position="stacked">Celular:</ion-label>
+            <ion-input value="0987778907"></ion-input>
+            <ion-button fill="clear" slot="end">
+              <ion-icon name="create-outline"></ion-icon>
+            </ion-button>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <!-- Los demás campos continúan como antes -->
+    <ion-item>
+      <ion-label position="stacked">Nombre de Usuario:</ion-label>
+      <ion-input value="AnderTuBB1234"></ion-input>
+      <ion-button fill="clear" slot="end">
+        <ion-icon name="create-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Contraseña:</ion-label>
+      <ion-input type="password" value="********"></ion-input>
+      <ion-button fill="clear" slot="end">
+        <ion-icon name="eye-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Email:</ion-label>
+      <ion-input value="allara1@espe.edu.ec"></ion-input>
+      <ion-button fill="clear" slot="end">
+        <ion-icon name="create-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Ciudad:</ion-label>
+      <ion-select value="Santo Domingo">
+        <ion-select-option value="Santo Domingo">Santo Domingo</ion-select-option>
+        <ion-select-option value="Quito">Quito</ion-select-option>
+      </ion-select>
+      <ion-button fill="clear" slot="end">
+        <ion-icon name="create-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <div class="button-container">
+    <ion-button expand="block" color="danger">Deshabilitar Cuenta</ion-button>
+    <ion-button expand="block" color="primary">Guardar Cambios</ion-button>
+  </div>
+</ion-content>

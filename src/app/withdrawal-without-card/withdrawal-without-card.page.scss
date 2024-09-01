@@ -1,0 +1,67 @@
+ion-header {
+    --background: #F4FAFC;
+    --ion-background-color: #F4FAFC;
+  }
+  
+  ion-content {
+    --ion-background-color: #F4FAFC;
+    padding: 16px;
+  }
+  
+  ion-item {
+    --background: #fff;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding-left: 16px;
+    width: 100%; /* Hace que los items (labels y inputs) ocupen el 100% del ancho disponible */
+    height: 120px; /* Aumenta la altura de los items para que las cajas de texto sean más altas */
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem; /* Aumenta el tamaño del texto dentro de ion-item */
+  }
+  
+  ion-label {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.8rem; /* Aumenta el tamaño del texto de los labels */
+    color: #35424A;
+  }
+  
+  ion-input {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.8rem; /* Aumenta el tamaño del texto dentro de los inputs */
+    color: #35424A;
+  }
+  
+  .account-button {
+    --border-radius: 10px;
+    --background: white;
+    --color: #0F2A3F;
+    border: 1px solid #0F2A3F;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.8rem; /* Aumenta el tamaño del texto dentro de los botones de cuenta */
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding: 25px; /* Aumenta el padding para hacer el botón más alto */
+    height: 100px; /* Aumenta la altura de los botones */
+    width: 100%; /* Hace que los botones de cuenta ocupen todo el ancho disponible */
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .button-container {
+    margin-top: 20px;
+  }
+  
+  ion-button[color="primary"] {
+    --background: #0F2A3F;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.8rem; /* Aumenta el tamaño del texto dentro del botón "Solicitar Código" */
+    font-weight: bold;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 25px; /* Aumenta el padding para hacer el botón más alto */
+    height: 100px; /* Aumenta la altura del botón "Solicitar Código" */
+    width: 100%; /* Hace que el botón "Solicitar Código" ocupe todo el ancho disponible */
+  }
+  

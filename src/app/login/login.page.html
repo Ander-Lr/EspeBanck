@@ -1,0 +1,35 @@
+<div class="rectangle-63">
+  <img src="assets/logo.png" alt="Logo" class="image-pasted" style="width: 119px; height: 100px;">
+  
+  <h1 class="banco-esperanza">Banco ESPEranza</h1>
+  
+  <h2 class="heading-1">Inicio de sesión</h2>
+  
+  <p class="heading-2">Hola de nuevo. Ingrese su usuario y contraseña</p>
+  
+  <!-- Formulario para iniciar sesión -->
+  <form (ngSubmit)="onSubmit()">
+    <label class="label-34" for="email">Email</label>
+    <input id="email" type="email" class="label-39" placeholder="example@email.com">
+    
+    <label class="label-35" for="password">Password</label>
+    <div class="password-container">
+      <input id="password" type="password" class="label-40" placeholder="********">
+      <i class="fa fa-eye" id="togglePassword" (click)="togglePasswordVisibility()"></i>
+    </div>
+    
+    <button type="submit" class="rectangle-8-copy-3">Iniciar Sesión</button>
+  </form>
+
+  <!-- Botón o enlace para redirigir a crear cuenta -->
+  <button type="button" class="rectangle-8-copy-3" (click)="navigateToRegister()">Crear cuenta</button>
+
+  <div style="text-align: center;">
+    <a href="#" class="twitter-icon-1">
+      <i class="fa fa-facebook"></i> <!-- Icono de Facebook -->
+    </a>
+    <a href="#" class="facebook-icon-1">
+      <i class="fa fa-instagram"></i> <!-- Icono de Instagram -->
+    </a>
+  </div>
+</div>

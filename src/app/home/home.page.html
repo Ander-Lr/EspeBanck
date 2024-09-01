@@ -1,0 +1,113 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Transferencias Interbancarias</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <!-- Campo para Ingresar Cantidad -->
+    <ion-row>
+      <ion-col size="12">
+        <ion-item class="input-item">
+          <ion-label position="floating">Ingrese Cantidad</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <!-- Lista de Cuentas -->
+    <ion-row>
+      <ion-col size="12">
+        <ion-list>
+          <ion-item class="account-item" *ngFor="let account of accounts">
+            <ion-label>{{ account.name }}</ion-label>
+            <ion-badge>{{ account.balance | currency }}</ion-badge>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+
+    <!-- Campo para Ingresar Número de Cuenta -->
+    <ion-row>
+      <ion-col size="12">
+        <ion-item class="input-item">
+          <ion-label position="floating">Ingrese Número de cuenta</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-button expand="block" class="validate-button">Validar</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <!-- Campo para Ingresar Número de Cédula -->
+    <ion-row>
+      <ion-col size="12">
+        <ion-item class="input-item">
+          <ion-label position="floating">Número de cédula</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <!-- Selección de Banco -->
+    <ion-row>
+      <ion-col size="12">
+        <ion-item class="input-item">
+          <ion-label>Seleccionar Banco</ion-label>
+          <ion-select placeholder="Seleccione Banco">
+            <ion-select-option value="banco-guayaquil">Banco Guayaquil</ion-select-option>
+            <ion-select-option value="banco-bolivariano">Banco Bolivariano</ion-select-option>
+            <ion-select-option value="banco-pacifico">Banco del Pacífico</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <!-- Selección de Tipo de Cuenta -->
+    <ion-row>
+      <ion-col size="12">
+        <ion-item class="input-item">
+          <ion-label>Tipo de Cuenta</ion-label>
+          <ion-select placeholder="Tipo de Cuenta">
+            <ion-select-option value="ahorro">Ahorro</ion-select-option>
+            <ion-select-option value="corriente">Corriente</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <!-- Campo para Ingresar el Correo (Opcional) -->
+    <ion-row>
+      <ion-col size="12">
+        <ion-item class="input-item">
+          <ion-label position="floating">Ingrese el correo (opcional)</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <!-- Checkbox para Agregar a Contactos -->
+    <ion-row>
+      <ion-col size="12">
+        <ion-item lines="none">
+          <ion-checkbox slot="start"></ion-checkbox>
+          <ion-label>Agregar a contactos</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <!-- Botón para Transferir -->
+    <ion-row>
+      <ion-col size="12">
+        <ion-button expand="block" class="transfer-button">Transferir</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+
+
+
