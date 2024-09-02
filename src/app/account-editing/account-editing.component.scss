@@ -70,6 +70,11 @@ ion-button[color="primary"] {
   font-size: 1.6rem;
 }
 
+ion-button[color="medium"] {
+  --background: #9E9E9E;
+  font-size: 1.6rem;
+}
+
 ion-select-option {
   font-size: 1.6rem; /* Tamaño del texto de las opciones en el select */
 }

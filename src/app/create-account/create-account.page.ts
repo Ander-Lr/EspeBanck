@@ -10,8 +10,7 @@ export class CreateAccountPage implements OnInit {
 
   constructor(private router: Router) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   navigateToLogin() {
     this.router.navigate(['/login']);
@@ -20,6 +19,6 @@ export class CreateAccountPage implements OnInit {
   onSubmit(event: Event) {
     event.preventDefault(); // Esto evita que el formulario cause una recarga de la página
     // Aquí colocas la lógica para la creación de cuenta
-    // Ejemplo: llamada a un servicio para registrar un nuevo usuario
+    console.log('Formulario enviado');
   }
 }

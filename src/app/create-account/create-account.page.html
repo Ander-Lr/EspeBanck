@@ -9,7 +9,7 @@
   </div>
   
   <!-- Formulario -->
-  <form>
+  <form (submit)="onSubmit($event)">
     <div class="underline-input">
       <label class="nombres-" for="nombres">Nombres</label>
       <input id="nombres" type="text" class="input-field">
@@ -58,40 +58,15 @@
     <div class="underline-input">
       <label class="-ciudad-" for="ciudad">Ciudad</label>
       <select id="ciudad" class="select-1 input-field">
-        <option value="Azuay">Azuay</option>
-        <option value="Bolívar">Bolívar</option>
-        <option value="Cañar">Cañar</option>
-        <option value="Carchi">Carchi</option>
-        <option value="Chimborazo">Chimborazo</option>
-        <option value="Cotopaxi">Cotopaxi</option>
-        <option value="El Oro">El Oro</option>
-        <option value="Esmeraldas">Esmeraldas</option>
-        <option value="Galápagos">Galápagos</option>
-        <option value="Guayas">Guayas</option>
-        <option value="Imbabura">Imbabura</option>
-        <option value="Loja">Loja</option>
-        <option value="Los Ríos">Los Ríos</option>
-        <option value="Manabí">Manabí</option>
-        <option value="Morona Santiago">Morona Santiago</option>
-        <option value="Napo">Napo</option>
-        <option value="Orellana">Orellana</option>
-        <option value="Pastaza">Pastaza</option>
-        <option value="Pichincha">Pichincha</option>
-        <option value="Santa Elena">Santa Elena</option>
-        <option value="Santo Domingo">Santo Domingo</option>
-        <option value="Sucumbíos">Sucumbíos</option>
-        <option value="Tungurahua">Tungurahua</option>
-        <option value="Zamora Chinchipe">Zamora Chinchipe</option>
+        <!-- Opciones de la ciudad -->
       </select>
     </div>
 
     <div class="checkbox-container">
       <input type="checkbox" id="terms" class="checkbox-4">
-      <label for="terms" class="i-agree-to-the-terms-of-services-and-privacy-polic-3">I agree to the Terms of Services and Privacy Policy.</label>
+      <label for="terms" class="i-agree-to-the-terms-of-services-and-privacy-polic-3">Acepto los términos de servicio y la política de privacidad.</label>
     </div>
 
     <button type="submit" class="rectangle-8-copy-8">Crear cuenta</button>
   </form>
 </div>
-
-
