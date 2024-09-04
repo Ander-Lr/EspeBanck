@@ -10,11 +10,11 @@
   <!-- Formulario para iniciar sesión -->
   <form (ngSubmit)="onSubmit()">
     <label class="label-34" for="email">Email</label>
-    <input id="email" type="email" class="label-39" placeholder="example@email.com">
+    <input [(ngModel)]="email" name="email" id="email" type="email" class="label-39" placeholder="example@email.com">
     
     <label class="label-35" for="password">Password</label>
     <div class="password-container">
-      <input id="password" type="password" class="label-40" placeholder="********">
+      <input [(ngModel)]="password" name="password" id="password" type="password" class="label-40" placeholder="********">
       <i class="fa fa-eye" id="togglePassword" (click)="togglePasswordVisibility()"></i>
     </div>
     

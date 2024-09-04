@@ -22,12 +22,12 @@
 
     <div class="underline-input">
       <label class="-c-dula-de-identidad-" for="cedula">Cédula de identidad</label>
-      <input id="cedula" type="text" class="input-field">
+      <input id="cedula" [(ngModel)]="cedula" name="cedula" type="text" class="input-field">
     </div>
 
     <div class="underline-input">
       <label class="-correo-electr-nico-" for="correo">Correo electrónico</label>
-      <input id="correo" type="email" class="input-field">
+      <input id="correo" [(ngModel)]="email" name="email" type="email" class="input-field">
     </div>
 
     <div class="underline-input">
@@ -47,12 +47,12 @@
 
     <div class="underline-input">
       <label class="contrase-a-1" for="password">Contraseña</label>
-      <input id="password" type="password" class="input-field">
+      <input id="password" [(ngModel)]="password" name="password" type="password" class="input-field">
     </div>
 
     <div class="underline-input">
       <label class="confirmar-contrase-a-1" for="confirm-password">Confirmar contraseña</label>
-      <input id="confirm-password" type="password" class="input-field">
+      <input id="confirm-password" [(ngModel)]="confirmPassword" name="confirmPassword" type="password" class="input-field">
     </div>
 
     <div class="underline-input">

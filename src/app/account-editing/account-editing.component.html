@@ -24,13 +24,13 @@
         <ion-col>
           <ion-item>
             <ion-label position="stacked">Nombres:</ion-label>
-            <ion-input value="Anderson Lenin"></ion-input>
+            <ion-input [disabled]="!editableFields['nombre']" value="Anderson Lenin"></ion-input>
           </ion-item>
         </ion-col>
         <ion-col>
           <ion-item>
             <ion-label position="stacked">Apellidos:</ion-label>
-            <ion-input value="Lara Chicaiza"></ion-input>
+            <ion-input [disabled]="!editableFields['apellido']" value="Lara Chicaiza"></ion-input>
           </ion-item>
         </ion-col>
       </ion-row>
@@ -42,14 +42,14 @@
         <ion-col>
           <ion-item>
             <ion-label position="stacked">Cédula:</ion-label>
-            <ion-input value="1234567890"></ion-input>
+            <ion-input [disabled]="!editableFields['cedula']" value="1234567890"></ion-input>
           </ion-item>
         </ion-col>
         <ion-col>
           <ion-item>
             <ion-label position="stacked">Celular:</ion-label>
-            <ion-input value="0987778907"></ion-input>
-            <ion-button fill="clear" slot="end">
+            <ion-input [disabled]="!editableFields['celular']" value="0987778907"></ion-input>
+            <ion-button fill="clear" slot="end" (click)="toggleEdit('celular')">
               <ion-icon name="create-outline"></ion-icon>
             </ion-button>
           </ion-item>
@@ -60,42 +60,42 @@
     <!-- Los demás campos continúan como antes -->
     <ion-item>
       <ion-label position="stacked">Nombre de Usuario:</ion-label>
-      <ion-input value="AnderTuBB1234"></ion-input>
-      <ion-button fill="clear" slot="end">
+      <ion-input [disabled]="!editableFields['username']" value="AnderTuBB1234"></ion-input>
+      <ion-button fill="clear" slot="end" (click)="toggleEdit('username')">
         <ion-icon name="create-outline"></ion-icon>
       </ion-button>
     </ion-item>
 
     <ion-item>
       <ion-label position="stacked">Contraseña:</ion-label>
-      <ion-input type="password" value="********"></ion-input>
-      <ion-button fill="clear" slot="end">
+      <ion-input type="password" [disabled]="!editableFields['password']" value="********"></ion-input>
+      <ion-button fill="clear" slot="end" (click)="toggleEdit('password')">
         <ion-icon name="eye-outline"></ion-icon>
       </ion-button>
     </ion-item>
 
     <ion-item>
       <ion-label position="stacked">Email:</ion-label>
-      <ion-input value="allara1@espe.edu.ec"></ion-input>
-      <ion-button fill="clear" slot="end">
+      <ion-input [disabled]="!editableFields['email']" value="allara1@espe.edu.ec"></ion-input>
+      <ion-button fill="clear" slot="end" (click)="toggleEdit('email')">
         <ion-icon name="create-outline"></ion-icon>
       </ion-button>
     </ion-item>
 
     <ion-item>
       <ion-label position="stacked">Ciudad:</ion-label>
-      <ion-select value="Santo Domingo">
+      <ion-select [disabled]="!editableFields['ciudad']" value="Santo Domingo">
         <ion-select-option value="Santo Domingo">Santo Domingo</ion-select-option>
         <ion-select-option value="Quito">Quito</ion-select-option>
       </ion-select>
-      <ion-button fill="clear" slot="end">
+      <ion-button fill="clear" slot="end" (click)="toggleEdit('ciudad')">
         <ion-icon name="create-outline"></ion-icon>
       </ion-button>
     </ion-item>
   </ion-list>
 
   <div class="button-container">
-    <ion-button expand="block" color="danger">Deshabilitar Cuenta</ion-button>
+    <ion-button expand="block" color="danger" (click)="disableAccount()">Deshabilitar Cuenta</ion-button>
     <ion-button expand="block" color="primary">Guardar Cambios</ion-button>
     <ion-button expand="block" color="medium" (click)="logout()">
       <ion-icon slot="start" name="log-out-outline"></ion-icon>

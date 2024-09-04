@@ -14,7 +14,7 @@
       <ion-col size="12">
         <ion-item class="input-item">
           <ion-label position="floating">Ingrese Cantidad</ion-label>
-          <ion-input type="text"></ion-input>
+          <ion-input type="number" [(ngModel)]="amount"></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
@@ -36,9 +36,9 @@
       <ion-col size="12">
         <ion-item class="input-item">
           <ion-label position="floating">Ingrese Número de cuenta</ion-label>
-          <ion-input type="text"></ion-input>
+          <ion-input type="text" [(ngModel)]="accountNumber"></ion-input>
         </ion-item>
-        <ion-button expand="block" class="validate-button">Validar</ion-button>
+        <ion-button expand="block" class="validate-button" (click)="validateAccount()">Validar</ion-button>
       </ion-col>
     </ion-row>
 
@@ -47,7 +47,7 @@
       <ion-col size="12">
         <ion-item class="input-item">
           <ion-label position="floating">Número de cédula</ion-label>
-          <ion-input type="text"></ion-input>
+          <ion-input type="text" [(ngModel)]="idNumber"></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
@@ -57,7 +57,7 @@
       <ion-col size="12">
         <ion-item class="input-item">
           <ion-label>Seleccionar Banco</ion-label>
-          <ion-select placeholder="Seleccione Banco">
+          <ion-select placeholder="Seleccione Banco" [(ngModel)]="selectedBank">
             <ion-select-option value="banco-guayaquil">Banco Guayaquil</ion-select-option>
             <ion-select-option value="banco-bolivariano">Banco Bolivariano</ion-select-option>
             <ion-select-option value="banco-pacifico">Banco del Pacífico</ion-select-option>
@@ -71,7 +71,7 @@
       <ion-col size="12">
         <ion-item class="input-item">
           <ion-label>Tipo de Cuenta</ion-label>
-          <ion-select placeholder="Tipo de Cuenta">
+          <ion-select placeholder="Tipo de Cuenta" [(ngModel)]="accountType">
             <ion-select-option value="ahorro">Ahorro</ion-select-option>
             <ion-select-option value="corriente">Corriente</ion-select-option>
           </ion-select>
@@ -84,7 +84,7 @@
       <ion-col size="12">
         <ion-item class="input-item">
           <ion-label position="floating">Ingrese el correo (opcional)</ion-label>
-          <ion-input type="text"></ion-input>
+          <ion-input type="text" [(ngModel)]="email"></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
@@ -93,7 +93,7 @@
     <ion-row>
       <ion-col size="12">
         <ion-item lines="none">
-          <ion-checkbox slot="start"></ion-checkbox>
+          <ion-checkbox slot="start" [(ngModel)]="addToContacts"></ion-checkbox>
           <ion-label>Agregar a contactos</ion-label>
         </ion-item>
       </ion-col>
@@ -102,12 +102,8 @@
     <!-- Botón para Transferir -->
     <ion-row>
       <ion-col size="12">
-        <ion-button expand="block" class="transfer-button">Transferir</ion-button>
+        <ion-button expand="block" class="transfer-button" (click)="transfer()">Transferir</ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>
-
-
-
-

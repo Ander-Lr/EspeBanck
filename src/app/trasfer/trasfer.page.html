@@ -8,7 +8,6 @@
 </ion-header>
 
 <ion-content>
-  <!-- Contenido de la página Transferir -->
   <ion-grid>
     <!-- Ingrese Cantidad -->
     <ion-row>
@@ -41,7 +40,7 @@
           <ion-label position="floating">Ingrese Número de cuenta</ion-label>
           <ion-input type="text" [(ngModel)]="accountNumber"></ion-input>
         </ion-item>
-        <ion-button expand="block" class="validate-button">Validar</ion-button>
+        <ion-button expand="block" class="validate-button" (click)="validateAccount()">Validar</ion-button>
       </ion-col>
     </ion-row>
 
@@ -66,9 +65,3 @@
     <ion-button expand="block" class="button-style" routerLink="/home">Transferencia Interbancaria</ion-button>
   </ion-grid>
 </ion-content>
-
-
-
-
-
-

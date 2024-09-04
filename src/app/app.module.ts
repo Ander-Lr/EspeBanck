@@ -6,13 +6,20 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
-import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { AngularFireModule } from '@angular/fire/compat';  // API de compatibilidad para AngularFire
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore'; // API de compatibilidad para Firestore
+import { environment } from '../environments/environment'; // Importa la configuración de Firebase
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, provideFirebaseApp(() => initializeApp({"projectId":"esperanza-bd","appId":"1:482012383025:web:efd7e1e6cb052f5276d210","storageBucket":"esperanza-bd.appspot.com","apiKey":"AIzaSyAje6ZIK9FYZls5F_XDT7GHNiPUvh1Icts","authDomain":"esperanza-bd.firebaseapp.com","messagingSenderId":"482012383025","measurementId":"G-2KCSWZ4GH9"})), provideFirestore(() => getFirestore())],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig), // Inicializa Firebase con la configuración del environment
+    AngularFirestoreModule, // Importa Firestore para operaciones de base de datos
+  ],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
